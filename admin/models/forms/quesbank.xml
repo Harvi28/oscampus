@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addrulepath="components/com_osce/models/rules">
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="ques"
+				type="text"
+				size="40"
+				class="inputbox"
+				default=""
+				required="true"
+				/>
+				<!-- validate="Question" -->
+				<!-- message="Custom validation messsage" -->
+
+				
+
+
+		<field
+			name="opt1"
+			type="text"
+			required="true"
+
+			/>
+		<field
+			name="opt2"
+			type="text"
+			required="true"
+
+			/>
+		<field
+			name="opt3"
+			type="text"
+			required="true"
+			/>
+		<field
+			name="opt4"
+			type="text"
+			required="true"
+
+			/>
+		
+		<field name="correct_ans" type="radio"  label="Select an option" description="" class="btn-group" required="true">
+	  		<option value="0">0</option>
+	  		<option value="1">1</option>
+	  		<option value="2">2</option>
+	  		<option value="3">3</option>
+
+		</field>
+
+
+	</fieldset>
+	
+		<fieldset 
+			name="tags"
+		>
+		<field
+					name="tag_id"
+					type="sql"
+					query="SELECT id, title FROM vdpme_osce_tags"
+    				key_field="id"
+    				value_field = "title"
+					multiple="multiple"
+					required="true"
+
+		>
+				
+		</field>		
+		</fieldset>
+	
+	<fieldset>
+		<field
+			name="created_by"
+			type="text"
+			required="true"
+			/>
+		<field
+			name="modified_on"
+			type="calendar"
+			
+			/>
+		
+		<field
+			name="modified_by"
+			type="text"
+			
+			/>
+		
+	</fieldset>
+	
+</form>
